@@ -29,6 +29,12 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean verify -Dtestng.dtd.http=true
+    - name: Build and Run Tests
+      run: mvn test --batch-mode -Dmaven.test.failure.ignore=true
+    - name: Publish Test Report
+      uses: starburstdata/action-testng-report@v3
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     #- name: Update dependency graph
