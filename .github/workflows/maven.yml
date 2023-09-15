@@ -47,6 +47,7 @@ jobs:
       with:
         branch: gh-pages
         folder: ./REPORTS
+        node-version: 16
           
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
