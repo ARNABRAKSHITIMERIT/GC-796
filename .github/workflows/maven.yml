@@ -40,8 +40,13 @@ jobs:
       uses: actions/upload-artifact@v3
       if: success() || failure()
       with:
+        name: TestNG Emailable Report
+        path: test-output/emailable-report.html  
+    - name: Deploy pages
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      with:
         name: Test Report
-        path: test-output/emailable-report.html     
+        folder: ./REPORTS
           
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
