@@ -7,6 +7,8 @@
   <test name="Test">
     <classes>
       <class name="TEST_CASES.TC_Login_Logout"/>
+      <class name="TEST_CASES.TC_Organizations"/>
+      <class name="TEST_CASES.TC_Projects"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

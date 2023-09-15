@@ -6,13 +6,62 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TEST_CASES.TC_Login_Logout">
+      <class name="TEST_CASES.TC_Projects">
         <methods>
+          <include name="Test_Case_029_Verify_Project_Sort_Dropdown"/>
+          <include name="Test_Case_021_Verify_Project_Analytics"/>
+          <include name="Test_Case_030_Verify_Project_Organization_Arnab_Stage"/>
+          <include name="Test_Case_051_Verify_Team_Tab_Pending_Invites"/>
+          <include name="Test_Case_062_Verify_New_Project_New_Project"/>
+          <include name="Test_Case_059_Verify_Issues_Tab_Central_Message"/>
+          <include name="Test_Case_066_Verify_New_Project_Cancel"/>
+          <include name="Test_Case_027_Verify_Project_Search"/>
+          <include name="Test_Case_057_Verify_Project_Details_Issues_Tab_Title"/>
+          <include name="Test_Case_044_Verify_Project_Details_Ontology_Tab"/>
+          <include name="Test_Case_025_Verify_Project_Completed"/>
+          <include name="Test_Case_026_Verify_Project_Canceled"/>
+          <include name="Test_Case_061_Verify_New_Project_Create"/>
+          <include name="Test_Case_024_Verify_Project_In_Progress"/>
+          <include name="Test_Case_028_Verify_Create_Project_Button"/>
+          <include name="Test_Case_048_Verify_Project_Details_URL_Configuration_Link"/>
+          <include name="Test_Case_052_Verify_Team_Tab_Filters"/>
+          <include name="Test_Case_060_Verify_New_Project_Projects"/>
+          <include name="Test_Case_046_Verify_Project_Details_Overview_Message"/>
+          <include name="Test_Case_064_Verify_New_Project_Name"/>
+          <include name="Test_Case_036_Verify_Project_Details_Name_Before_Update_27"/>
+          <include name="Test_Case_041_Verify_Project_Details_Solutions_Tab"/>
+          <include name="Test_Case_067_Verify_New_Project_Save"/>
+          <include name="Test_Case_039_Verify_Project_Details_Overview_Tab"/>
+          <include name="Test_Case_056_Verify_Solutions_Tab_Central_Message"/>
+          <include name="Test_Case_020_Verify_Project_Members"/>
+          <include name="Test_Case_068_Verify_Enter_New_Project_Name"/>
+          <include name="Test_Case_037_Verify_Project_Details_Status"/>
           <include name="Set_Up"/>
-          <include name="Test_Case_006_Log_Out_User_3"/>
+          <include name="Test_Case_033_Verify_Project_Block_Before_Update_27"/>
           <include name="Tear_Down"/>
+          <include name="Test_Case_043_Verify_Project_Details_Guidelines_Tab"/>
+          <include name="Test_Case_023_Verify_Project_Draft"/>
+          <include name="Test_Case_063_Verify_New_Project_Project_Details"/>
+          <include name="Test_Case_058_Verify_Issues_Tab_Filters"/>
+          <include name="Test_Case_019_Verify_Project_Projects"/>
+          <include name="Test_Case_065_Verify_New_Project_Description"/>
+          <include name="Test_Case_032_Verify_Project_Sort_Dropdown_Name"/>
+          <include name="Test_Case_031_Verify_Project_Sort_Dropdown_Created_On"/>
+          <include name="Test_Case_053_Verify_Team_Tab_Add_Member"/>
+          <include name="Test_Case_054_Verify_Team_Tab_Central_Message"/>
+          <include name="Test_Case_047_Verify_Project_Details_Field_Updates"/>
+          <include name="Test_Case_049_Verify_Project_Details_Widget_Configuration_Link"/>
+          <include name="Test_Case_038_Verify_Project_Details_Datasaur"/>
+          <include name="Test_Case_022_Verify_Project_Projects_Title"/>
+          <include name="Test_Case_034_Verify_Project_Before_Update_27_Page_Title"/>
+          <include name="Test_Case_045_Verify_Project_Details_Settings_Tab"/>
+          <include name="Test_Case_040_Verify_Project_Details_Issues_Tab"/>
+          <include name="Test_Case_035_Verify_Project_Details_Projects"/>
+          <include name="Test_Case_055_Verify_Project_Details_Solutions_Tab_Title"/>
+          <include name="Test_Case_050_Verify_Project_Details_Team_Tab_Title"/>
+          <include name="Test_Case_042_Verify_Project_Details_Team_Tab"/>
         </methods>
-      </class> <!-- TEST_CASES.TC_Login_Logout -->
+      </class> <!-- TEST_CASES.TC_Projects -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

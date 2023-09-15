@@ -21,8 +21,11 @@ ExtentReports reports ;
 ExtentTest test ;	
 	
 public void configureReport () {
-Read_Config read_config = new Read_Config();	
-String reportname = "GC UI Automation Test Report.html" ;
+Read_Config read_config = new Read_Config() ;
+Timestamp timestamp = new Timestamp(System.currentTimeMillis()) ; 
+String timestamp_string=timestamp.toString(); 
+String reportname = ("GC UI Automation Test Report.html" + " " +  timestamp_string) ;
+reportname = reportname.replace(":" , "-");
 htmlReporter = new 	ExtentSparkReporter(System.getProperty("user.dir") + "//REPORTS//" + reportname) ;
 reports = new ExtentReports () ;
 reports.attachReporter(htmlReporter) ;	
@@ -33,7 +36,7 @@ reports.setSystemInfo("User Name :" , "Arnab Rakshit") ;
 htmlReporter.config().setDocumentTitle("Extent Report Itest_Listener") ;
 htmlReporter.config().setReportName("Extent Report of Ground Control UI Automation") ;
 htmlReporter.config().setTheme(Theme.DARK) ;
-htmlReporter.config().setTimeStampFormat("EEEE , MMMM dd , yyyyy , hh:mm a '('zzz')' "); }
+htmlReporter.config().setTimeStampFormat("EEEE , MMMM dd , yyyyy , hh:mm a '('zzz')' ") ; }
 	
 public void onStart (ITestContext Result) {
 configureReport();
