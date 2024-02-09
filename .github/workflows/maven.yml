@@ -35,15 +35,24 @@ jobs:
     - name: Run tests
       run: mvn test  # Adjust this command based on your Maven test process
 
-    - name: Generate Extent Report
-      run: mvn com.aventstack:extentreports-maven-plugin:3.1.5:aggregate  # Generate Extent Report
-      if: always()  # Generate report even if tests fail
+    - name: Publish Test Report
+      uses: starburstdata/action-testng-report@v1
 
-    - name: Upload Extent Report
+    - name: Upload TestNG report
       uses: actions/upload-artifact@v2
       with:
-        name: extent-report
-        path: REPORTS/
+         name: testng-reports
+         path: test-output/emailable-report.html 
+
+   # - name: Generate Extent Report
+    #  run: mvn com.aventstack:extentreports-maven-plugin:3.1.5:aggregate  # Generate Extent Report
+    #  if: always()  # Generate report even if tests fail
+
+    #- name: Upload Extent Report
+    #  uses: actions/upload-artifact@v2
+    #  with:
+     #   name: extent-report
+     #   path: REPORTS/
       
     #- name: Generate test report
     #  run: mvn surefire-report:report  # Generate test reports using Surefire Plugin
