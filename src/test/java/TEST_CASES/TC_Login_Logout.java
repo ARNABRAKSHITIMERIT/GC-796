@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions ;
 
 public class TC_Login_Logout extends Base_Class {
 	
-@Test (priority=1 , enabled = false)	
+@Test (priority=1 ,enabled = false)	
 public void Test_Case_001_Log_In_Administrator() throws InterruptedException , IOException {
 driver.get(URL) ;
 Login_Page login_page = new Login_Page(driver) ;	
