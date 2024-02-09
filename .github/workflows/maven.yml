@@ -40,11 +40,11 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Upload TestNG report
-      uses: actions/upload-artifact@v2
-      with:
-         name: testng-reports
-         path: REPORTS/
+    #- name: Upload TestNG report
+     # uses: actions/upload-artifact@v2
+      #with:
+       #  name: testng-reports
+        # path: REPORTS/
 
    # - name: Generate Extent Report
     #  run: mvn com.aventstack:extentreports-maven-plugin:3.1.5:aggregate  # Generate Extent Report
