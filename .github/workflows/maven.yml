@@ -34,16 +34,26 @@ jobs:
       
     - name: Run tests
       run: mvn test  # Adjust this command based on your Maven test process
-      
-    - name: Generate test report
-      run: mvn surefire-report:report  # Generate test reports using Surefire Plugin
-      continue-on-error: true  # Continue even if the report generation fails
 
-    - name: Upload test report
+    - name: Generate Extent Report
+      run: mvn com.aventstack:extentreports-maven-plugin:3.1.5:aggregate  # Generate Extent Report
+      if: always()  # Generate report even if tests fail
+
+    - name: Upload Extent Report
       uses: actions/upload-artifact@v2
       with:
-        name: surefire-reports
-        path: target/site/surefire-report
+        name: extent-report
+        path: REPORTS/
+      
+    #- name: Generate test report
+    #  run: mvn surefire-report:report  # Generate test reports using Surefire Plugin
+     # continue-on-error: true  # Continue even if the report generation fails
+
+  #  - name: Upload test report
+   #   uses: actions/upload-artifact@v2
+    #  with:
+    #    name: surefire-reports
+     #   path: target/site/surefire-report
 
    # - name: Generate TestNG report
     #  run: mvn surefire-report:report-only  # Generate the XML reports
