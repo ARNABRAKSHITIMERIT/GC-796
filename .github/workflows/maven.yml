@@ -28,22 +28,34 @@ jobs:
         java-version: '19'
         distribution: 'temurin'
         cache: maven
+        
     - name: Build with Maven
       run: mvn clean verify -Dtestng.dtd.http=true
+      
     - name: Run tests
       run: mvn test  # Adjust this command based on your Maven test process
+      
+    - name: Generate test report
+      run: mvn surefire-report:report  # Generate test reports using Surefire Plugin
+      continue-on-error: true  # Continue even if the report generation fails
 
-    - name: Generate TestNG report
-      run: mvn surefire-report:report-only  # Generate the XML reports
-
-    - name: Convert TestNG XML to HTML
-      run: java -cp target/dependency/*;target/test-classes;target/classes org.testng.TestNG test-output/emailable-report.html
-
-    - name: Upload TestNG report
+    - name: Upload test report
       uses: actions/upload-artifact@v2
       with:
-        name: testng-reports
-        path: test-output/emailable-report.html   # Path to the HTML TestNG report
+        name: surefire-reports
+        path: target/site/surefire-report
+
+   # - name: Generate TestNG report
+    #  run: mvn surefire-report:report-only  # Generate the XML reports
+
+   # - name: Convert TestNG XML to HTML
+    #  run: java -cp target/dependency/*;target/test-classes;target/classes org.testng.TestNG test-output/emailable-report.html
+
+   # - name: Upload TestNG report
+    #  uses: actions/upload-artifact@v2
+     # with:
+      #  name: testng-reports
+       # path: test-output/emailable-report.html   # Path to the HTML TestNG report
   
     
     
