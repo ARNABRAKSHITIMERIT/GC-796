@@ -10,5 +10,5 @@
       <class name="TEST_CASES.TC_Organizations"/>
       <class name="TEST_CASES.TC_Projects"/>
     </classes>
-  </test>  <!-- Test -->
-</suite>  <!-- Suite -->
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
