@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: testng-reports
-        path: target/surefire-reports/emailable-report.html  # Path to the HTML TestNG report
+        path: test-output/emailable-report.html   # Path to the HTML TestNG report
   
     
     
