@@ -36,8 +36,8 @@ jobs:
     - name: Generate TestNG report
       run: mvn surefire-report:report-only  # Generate the XML reports
 
-    #- name: Convert TestNG XML to HTML
-      #run: java -cp target/dependency/*;target/test-classes;target/classes org.testng.TestNG target/surefire-reports/testng-results.xml
+    - name: Convert TestNG XML to HTML
+      run: java -cp target/dependency/*;target/test-classes;target/classes org.testng.TestNG test-output/emailable-report.html
 
     - name: Upload TestNG report
       uses: actions/upload-artifact@v2
